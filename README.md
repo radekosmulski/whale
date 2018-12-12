@@ -1,8 +1,8 @@
 # Humpback Whale Identification Competition Starter Pack
 
-The code in this repo is all you need to make a first submission to the [Humpback Whale Identification Competition](https://www.kaggle.com/c/humpback-whale-identification). It uses the [FastAi library](https://github.com/fastai/fastai) release 1.0.36.post1 (this is important - you are likely to encounter an error if you use any other version of the library). 
+The code in this repo is all you need to make a first submission to the [Humpback Whale Identification Competition](https://www.kaggle.com/c/humpback-whale-identification). It uses the [FastAi library](https://github.com/fastai/fastai) release 1.0.36.post1 (this is important - you are likely to encounter an error if you use any other version of the library).
 
-For additional information please refer to the discussion thread on [Kaggle forums](https://www.kaggle.com/c/quickdraw-doodle-recognition/discussion/69409).
+For additional information please refer to the discussion thread on [Kaggle forums](https://www.kaggle.com/c/humpback-whale-identification/discussion/74647).
 
 ## Making first submission
 1. Install the [fastai library](https://github.com/fastai/fastai), specifically version 1.0.36.post1. The easiest way to do it is to follow the developer install as outlined in the README of the fastai repository. Once you perform the installation, navigate to the fastai directory and execute `git checkout 1.0.36.post1`. You can verify that this worked by executing the following inside jupyter notebook or a Python REPL:
@@ -18,6 +18,8 @@ fastai.__version__
 ## Navigating through the repository
 
 Here is the order in which I worked on the notebooks:
-1. first_submission - getting all the basics in place
-2. new_whale detector - binary classifer known_whale / new_whale
-3. only_known
+1. [first_submission](https://github.com/radekosmulski/whale/blob/master/first_submission.ipynb) - getting all the basics in place
+2. [new_whale_detector](https://github.com/radekosmulski/whale/blob/master/new_whale_detector.ipynb) - binary classifer known_whale / new_whale
+3. [oversample](https://github.com/radekosmulski/whale/blob/master/oversample.ipynb) - addressing class imbalance
+4. [only_known_research](https://github.com/radekosmulski/whale/blob/master/only_known_research.ipynb) - how to modify the architecture and what hyperparams to use
+5. [only_known_train](https://github.com/radekosmulski/whale/blob/master/only_known_train.ipynb) - training on full dataset
