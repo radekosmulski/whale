@@ -4,6 +4,8 @@ The code in this repo is all you need to make a first submission to the [Humpbac
 
 For additional information please refer to the discussion thread on [Kaggle forums](https://www.kaggle.com/c/humpback-whale-identification/discussion/74647).
 
+**Some people [reported issues](https://github.com/radekosmulski/whale/issues/1) with running the first_submission notebook. If you encounter the issue, you should be okay to skip to the subsequent notebooks. The one that scores 0.760 on the LB is `only_known_train.ipynb`.**
+
 ## Making first submission
 1. Install the [fastai library](https://github.com/fastai/fastai), specifically version 1.0.36.post1. The easiest way to do it is to follow the developer install as outlined in the README of the fastai repository. Once you perform the installation, navigate to the fastai directory and execute `git checkout 1.0.36.post1`. You can verify that this worked by executing the following inside jupyter notebook or a Python REPL:
 ```
