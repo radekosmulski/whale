@@ -25,3 +25,5 @@ Here is the order in which I worked on the notebooks:
 3. [oversample](https://github.com/radekosmulski/whale/blob/master/oversample.ipynb) - addressing class imbalance
 4. [only_known_research](https://github.com/radekosmulski/whale/blob/master/only_known_research.ipynb) - how to modify the architecture and what hyperparams to use
 5. [only_known_train](https://github.com/radekosmulski/whale/blob/master/only_known_train.ipynb) - training on full dataset
+6. [resize](https://github.com/radekosmulski/whale/blob/master/resize.ipynb) - resize the images before training to free up CPU
+7. [siamese network](https://github.com/radekosmulski/whale/blob/master/siamese_network_prototype.ipynb) - a fully working prototype of a siamese network
