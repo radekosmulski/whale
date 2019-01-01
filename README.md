@@ -29,3 +29,4 @@ Here is the order in which I worked on the notebooks:
 7. [siamese network](https://github.com/radekosmulski/whale/blob/master/siamese_network_prototype.ipynb) - a fully working prototype of a siamese network
 8. **!!! Important !!!** - to make use of some of the new functionality available in fast.ai at this point I switch to 1.0.39.
 9. [fluke detection](https://github.com/radekosmulski/whale/blob/master/fluke_detection.ipynb) - train a model to draw bounding boxes surrounding flukes
+10. [fluke detection redux](https://github.com/radekosmulski/whale/blob/master/fluke_detection_redux.ipynb) - better results, less code, works with current fastai master
