@@ -43,3 +43,20 @@ def create_submission(preds, data, name, classes=None):
     sub = pd.DataFrame({'Image': [path.name for path in data.test_ds.x.items]})
     sub['Id'] = top_5_pred_labels(preds, classes)
     sub.to_csv(f'subs/{name}.csv.gz', index=False, compression='gzip')
+
+
+def intersection(preds, targs):
+    # preds and targs are of shape (bs, 4), pascal_voc format
+    max_xy = torch.min(preds[:, 2:], targs[:, 2:])
+    min_xy = torch.max(preds[:, :2], targs[:, :2])
+    inter = torch.clamp((max_xy - min_xy), min=0)
+    return inter[:, 0] * inter[:, 1]
+
+def area(boxes):
+    return ((boxes[:, 2]-boxes[:, 0]) * (boxes[:, 3]-boxes[:, 1]))
+
+def union(preds, targs):
+    return area(preds) + area(targs) - intersection(preds, targs)
+
+def IoU(preds, targs):
+    return intersection(preds, targs) / union(preds, targs)
