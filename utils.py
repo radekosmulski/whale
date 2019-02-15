@@ -23,11 +23,16 @@ def apk(actual, predicted, k=10):
 def mapk(actual, predicted, k=10):
     return np.mean([apk(a,p,k) for a,p in zip(actual, predicted)])
 
-def map5(preds, targs):
+def map5kfast(preds, targs, k=10):
     predicted_idxs = preds.sort(descending=True)[1]
     top_5 = predicted_idxs[:, :5]
-    res = mapk([[t] for t in targs.cpu().numpy()], top_5.cpu().numpy(), 5)
-    return torch.tensor(res)
+    scores = torch.zeros(len(preds), k).float()
+    for kk in range(k):
+        scores[:,kk] = (top_5[:,kk] == targs).float() / float((kk+1))
+    return scores.max(dim=1)[0].mean()
+
+def map5(preds, targs):
+    return map5kfast(preds, targs, 5)
 
 def top_5_preds(preds): return np.argsort(preds.numpy())[:, ::-1][:, :5]
 
