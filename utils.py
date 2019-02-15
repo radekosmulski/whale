@@ -31,8 +31,10 @@ def map5kfast(preds, targs, k=10):
         scores[:,kk] = (top_5[:,kk] == targs).float() / float((kk+1))
     return scores.max(dim=1)[0].mean()
 
-def map5(preds, targs):
-    return map5kfast(preds, targs, 5)
+def map5(preds,targs):
+    if type(preds) is list:
+        return torch.cat([map5fast(p, targs, 5).view(1) for p in preds ]).mean()
+    return map5fast(preds,targs, 5)
 
 def top_5_preds(preds): return np.argsort(preds.numpy())[:, ::-1][:, :5]
 
