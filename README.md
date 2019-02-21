@@ -31,3 +31,4 @@ Here is the order in which I worked on the notebooks:
 9. [fluke detection](https://github.com/radekosmulski/whale/blob/master/fluke_detection.ipynb) - train a model to draw bounding boxes surrounding flukes
 10. **!!! Important !!!** - here I switch to fastai master to incorporate a bug fix, will annotate with version once a new release comes out
 11. [fluke detection redux](https://github.com/radekosmulski/whale/blob/master/fluke_detection_redux.ipynb) - better results, less code, works with current fastai master
+12. [extract bboxes](https://github.com/radekosmulski/whale/blob/master/extract_bboxes.ipynb) - predicted bounding box extraction in images of specified size
