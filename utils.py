@@ -34,7 +34,7 @@ def map5kfast(preds, targs, k=10):
 def map5(preds,targs):
     if type(preds) is list:
         return torch.cat([map5fast(p, targs, 5).view(1) for p in preds ]).mean()
-    return map5fast(preds,targs, 5)
+    return map5kfast(preds,targs, 5)
 
 def top_5_preds(preds): return np.argsort(preds.numpy())[:, ::-1][:, :5]
 
