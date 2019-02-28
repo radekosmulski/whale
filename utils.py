@@ -1,6 +1,8 @@
 import numpy as np
 import torch
 import pandas as pd
+import random
+import string
 
 # https://github.com/benhamner/Metrics/blob/master/Python/ml_metrics/average_precision.py
 def apk(actual, predicted, k=10):
@@ -67,3 +69,8 @@ def union(preds, targs):
 
 def IoU(preds, targs):
     return intersection(preds, targs) / union(preds, targs)
+
+def name(n=10, print_it=True):
+    name = "".join(random.choice(string.ascii_lowercase) for _ in range(n))
+    if print_it: print(name)
+    return name
