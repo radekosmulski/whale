@@ -32,3 +32,4 @@ Here is the order in which I worked on the notebooks:
 10. **!!! Important !!!** - here I switch to fastai master to incorporate a bug fix, will annotate with version once a new release comes out
 11. [fluke detection redux](https://github.com/radekosmulski/whale/blob/master/fluke_detection_redux.ipynb) - better results, less code, works with current fastai master
 12. [extract bboxes](https://github.com/radekosmulski/whale/blob/master/extract_bboxes.ipynb) - predicted bounding box extraction in images of specified size
+13. [classification and metric learning](https://github.com/radekosmulski/whale/blob/master/classification_and_metric_learning.ipynb) - training the for predicting whale ids, places in top 7% of the competition
